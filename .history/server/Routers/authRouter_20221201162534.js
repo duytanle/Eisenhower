@@ -1,5 +1,6 @@
 import express from "express";
 import authController from "../Controllers/AuthController/authController.js";
+import verifyToken from "../Middleware/verifyToken.js";
 const router = express.Router();
 
 router.post("/register", authController.register);

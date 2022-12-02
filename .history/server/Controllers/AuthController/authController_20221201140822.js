@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import Account from "../../Models/Account.js";
 import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: `../../../server/.env` });
 const authController = {
     register: async (req, res, next) => {
         const { username, password, retypePassword, name } = req.body;
